@@ -28,10 +28,11 @@
 
 
 ############## Demo Page ##############
-# Page address is valid
+
 Name: Demo Page is accessible 
 Steps: Insert link to Demo page (https://www.xeneta.com/demo) to browser address field
 Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
+
 
 # Tests for page body
 
