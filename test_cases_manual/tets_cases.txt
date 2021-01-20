@@ -1,0 +1,62 @@
+# Hi Xenetian! I want to add a short disclamer before we start.
+#
+# I intentionally ignored some types of tests, which can be concidered as 
+# functional, because the idea of writing specific cases for these 2 pages
+# is more about these pages, not web testing in general. 
+# So, login testing, cookies testing, HTML and CCR testing will be not 
+# mentioned in this document, but I can add them if I misunderstood the 
+# main idea.
+#
+# Formatting: I fully understand, that real test cases should contain much more
+# information, like test case numbers, revision or version, priority, pre- and
+# postcondidtions, target product versions, some test data, links to documentstion 
+# etc. But I tried to make them as simple and readable as possible, since they are 
+# not even a real test cases.
+# Comments start with "#" obiviously.
+#
+# Parameters: if exactly the same tests should be executed for different objects, 
+# I add all of components as parameters.
+#
+# Environment: In a perfect world I would strongly recommend to run each test case
+# in a several difference browsers (with different resolutions) and on several OSes 
+# with difference devices or device emulators/VMs.
+# I can add a list of most popular devices/OSes/browsers if it's needed.
+#
+# Order: tests are sorted by priority from highest to lowest.
+#
+# So, let's rock!
+
+
+############## Demo Page ##############
+
+Name: Demo Page is accessible 
+Steps: Insert link to Demo page (https://www.xeneta.com/demo) to browser address field
+Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
+
+
+# Tests for page body
+
+# Tests for page header
+
+# Tests for links in the bottom of the page
+
+# Text formatting and images + animation
+
+############## Careers Page ##############
+# Page address is valid
+Name: Careers Page is accessible 
+Steps: Insert link to Careers page (https://www.xeneta.com/careers) to browser address field
+Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
+
+
+# Tests for page body
+
+# Tests for page header
+
+# Tests for links in the bottom of the page
+
+# Text formatting and images + animation
+
+Name:
+Steps:
+Expected result:
