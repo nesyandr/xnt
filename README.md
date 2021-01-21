@@ -1,14 +1,17 @@
-# xnt
-Getting Started
-------------
+# Xeneta test task
 Project contains automated tests for Xeneta Website designed using python3, pytest and Selenium.
 
-Install all required python libraries using command:
-`pip install -r requirements.txt`
+Getting Started
+------------
+Install all required python libraries using command
+`pip install -r requirements.txt`.
 
-Install Selenium WebDriver for the browser under test:
-`TBD`
+Download the latest Chrome version from and install to default location
+`https://www.google.com/chrome/`.
 
+Download Chromedriver from `https://chromedriver.chromium.org/downloads`, 
+unpack it to `project_folder/chromedriver` folder and add it to $PATH.
+ 
 Project Organization
 ------------
 
