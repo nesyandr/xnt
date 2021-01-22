@@ -31,23 +31,25 @@ class BaseXenetaPage(BasePage):
 
 
 class CareersPage(BaseXenetaPage):
+    sections = [CareerLocators.JOIN_US_BANNER,
+                CareerLocators.WHAT_WE_DO_BANNER,
+                CareerLocators.OUR_VALUES_CONTAINER,
+                CareerLocators.GLOBAL_TRIBE_CONTAINER,
+                CareerLocators.OPEN_ROLES_CONTAINER
+                ]
+
     def __init__(self, driver):
         super().__init__(driver)
         self.base_url = "https://www.xeneta.com/careers"  # TODO make link concatenation?
-        sections = [CareerLocators.JOIN_US_BANNER,
-                         CareerLocators.WHAT_WE_DO_BANNER,
-                         CareerLocators.OUR_VALUES_CONTAINER,
-                         CareerLocators.GLOBAL_TRIBE_CONTAINER,
-                         CareerLocators.OPEN_ROLES_CONTAINER
-                         ]
-
 
 
 class DemoPage(BaseXenetaPage):
+    sections = [DemoLocators.PROCURE_FREIGHT_BANNER,
+                DemoLocators.LEARN_MORE_CONTAINER]
+
     def __init__(self, driver):
         super().__init__(driver)
         self.base_url = "https://www.xeneta.com/demo"  # TODO make link concatenation?
-        self.sections = [DemoLocators.PROCURE_FREIGHT_BANNER,
-                         DemoLocators.LEARN_MORE_CONTAINER]
+
 
 

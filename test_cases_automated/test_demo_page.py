@@ -14,19 +14,16 @@ def open_page(demo_page):
     demo_page.open_page()
 
 
-@pytest.fixture(params=demo_page.sections)
-def section(request):
-    return request.param
-
-
 def test_demo_page_address_is_valid(demo_page):
-    r = requests.get(demo_page.base_url).status_code
     try:
-        assert r == 200
-    except AssertionError:
-        pytest.fail(f"URL {demo_page.base_url} couldn't be opened; Status code {r}")
+        r = requests.get(demo_page.base_url).status_code
+    except Exception:
+        pytest.fail(f"URL {demo_page.base_url} can't  be opened")
+
+    assert r.status_code == 200
 
 
+@pytest.mark.parametrize("section", DemoPage.sections)
 def test_page_section_present(demo_page, section):
     assert demo_page.find_element(section)
 
