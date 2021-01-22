@@ -21,4 +21,4 @@ Project Organization
     │   ├── TBD       <-  TBD
     │   └── TBD            <-  TBD
     │
-    ├── test_cases_manual    <- A set of markdown files with documented best practices, guidelines and rools for collaborative projects
+    ├── test_cases_manual    <- TBD

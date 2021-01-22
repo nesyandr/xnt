@@ -37,7 +37,6 @@ class CareersPage(BaseXenetaPage):
 class DemoPage(BaseXenetaPage):
     def __init__(self, driver):
         super().__init__(driver)
-        #self.base_url = "https://www.xeneta.com/demo"  # TODO make link concatenation?
-        self.base_url = "https://httpstat.us/"  # TODO make link concatenation?
+        self.base_url = "https://www.xeneta.com/demo"  # TODO make link concatenation?
 
 
