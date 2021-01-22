@@ -1,6 +1,8 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from .locators import CareersPageLocators as CareerLocators
+from .locators import DemoPageLocators as DemoLocators
 
 WAITING_TIMEOUT = 10  # seconds
 
@@ -32,11 +34,20 @@ class CareersPage(BaseXenetaPage):
     def __init__(self, driver):
         super().__init__(driver)
         self.base_url = "https://www.xeneta.com/careers"  # TODO make link concatenation?
+        sections = [CareerLocators.JOIN_US_BANNER,
+                         CareerLocators.WHAT_WE_DO_BANNER,
+                         CareerLocators.OUR_VALUES_CONTAINER,
+                         CareerLocators.GLOBAL_TRIBE_CONTAINER,
+                         CareerLocators.OPEN_ROLES_CONTAINER
+                         ]
+
 
 
 class DemoPage(BaseXenetaPage):
     def __init__(self, driver):
         super().__init__(driver)
         self.base_url = "https://www.xeneta.com/demo"  # TODO make link concatenation?
+        self.sections = [DemoLocators.PROCURE_FREIGHT_BANNER,
+                         DemoLocators.LEARN_MORE_CONTAINER]
 
 

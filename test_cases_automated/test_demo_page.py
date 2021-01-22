@@ -1,7 +1,6 @@
 import requests
 import pytest
 
-from .locators import DemoPageLocators as DemoLocators
 from .page import DemoPage
 
 
@@ -15,9 +14,7 @@ def open_page(demo_page):
     demo_page.open_page()
 
 
-@pytest.fixture(
-                params=[DemoLocators.PROCURE_FREIGHT_BANNER,
-                        DemoLocators.LEARN_MORE_CONTAINER])
+@pytest.fixture(params=demo_page.sections)
 def section(request):
     return request.param
 
