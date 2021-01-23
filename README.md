@@ -6,8 +6,8 @@ Getting Started
 Install all required python libraries using command
 `pip install -r requirements.txt`.
 
-Download the latest Chrome version from and install to default location
-`https://www.google.com/chrome/`.
+Download the latest Chrome version from `https://www.google.com/chrome/`
+and install to default location.
 
 Download Chromedriver from `https://chromedriver.chromium.org/downloads`, 
 unpack it to `project_folder/chromedriver` folder and add it to $PATH.

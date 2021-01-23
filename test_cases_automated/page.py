@@ -47,9 +47,15 @@ class DemoPage(BaseXenetaPage):
     sections = [DemoLocators.PROCURE_FREIGHT_BANNER,
                 DemoLocators.LEARN_MORE_CONTAINER]
 
+    learn_more_wrappers = [DemoLocators.ONE_TO_ONE_DEMO,
+                           DemoLocators.WATCH_VIDEOS,
+                           DemoLocators.GROUP_LIVE_DEMO
+                          ]
+
     def __init__(self, driver):
         super().__init__(driver)
         self.base_url = "https://www.xeneta.com/demo"  # TODO make link concatenation?
+
 
 
 
