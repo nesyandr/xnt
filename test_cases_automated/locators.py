@@ -10,7 +10,7 @@ class DemoPageLocators(object):
     SECTION_BULLET_CIRCLE_REL_XPATH = './/div/a/div'
     SECTION_HEADER_REL_XPATH = './/div/div/h3'
     SECTION_TEXT_REL_XPATH = './/div/div/p/span[1]'
-# //*[@id="hs_cos_wrapper_module_1599651356652287"]/div/div/div/div/div/span/div[1]/div/div/p/span[1]/text()
+    SECTION_BUTTON_REL_XPATH = './/div/div/div/a'
 
 class CareersPageLocators(object):
     JOIN_US_BANNER = (By.ID, 'hs_cos_wrapper_module_158709745267770')
