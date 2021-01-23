@@ -28,11 +28,12 @@
 
 
 ############## Demo Page ##############
-
+## Page address ##
 Name: Demo Page address is valid
 Steps: Insert link to Demo page (https://www.xeneta.com/demo) to browser address field
 Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
 
+## Page sections, layout and test formatting ##
 # Tests for page body - it's better to check unique page elements first than elements which are present across all pages
 # Perform separate test for each section given as parameter
 Parameters/sections: Procure freight like a pro, See Xeneta In Action
@@ -41,7 +42,7 @@ Parameters/sections: Procure freight like a pro, See Xeneta In Action
     Expected result: [Section] is present
 
     Name: [Section] layout is correct
-    Steps: Open Demo page. Ensure that all [Section] elements are fully vivsible, do not cover each other and placed
+    Steps: Open Demo page. Ensure that all [Section] elements are fully visible, do not cover each other and placed
     correctly for different resolutions.
     Expected result: [Section] is present
 
@@ -59,9 +60,61 @@ Name: Demo page sections order
 Steps: Open Demo page. Check sections order.
 Expected result: Order is 1. Procure freight like a pro 2. See Xeneta In Action
 
+## Sections content & widgets ##
+Parameters/widgets: 1-TO-1 DEMO, WATCH VIDEOS, GROUP LIVE DEMO
+    Name: [Widget] is present
+    Steps: Open Demo page. Scroll to See Xeneta in Action section. Check if [widget] is present.
+    Expected result: [Widget] is present
+
+    # For this case there is a sense to compare picture with reference one, but I don't have any references :)
+    Name: [Widget] picture is correct
+    Steps: Open Demo page. Scroll to See Xeneta in Action section. Check if [widget] have a unique clickable picture
+    and it's places in upper part of [widget].
+    Expected result: Picture placed correctly, it's clickable.
+
+    # Here also comparing to the reference link makes sense or checking if link leads used to expected page.
+    Name: [Widget] picture link is valid.
+    Steps: Open Demo page. Scroll to See Xeneta in Action section. Click on [widget] picture and ensure that link can
+    be opened.
+    Expected result: Link is valid and leads to page.
+
+## Buttons and links ##
+Name: Button SCHEDULE NOW is present in 1-TO-1 DEMO section
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Check if SCHEDULE NOW Button is present in the bottom of
+this section.
+Expected result: Button is present, places correctly and clickable.
+
+# Here also having reference will be good
+Name: Link in Button SCHEDULE NOW is correct.
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Click on SCHEDULE NOW Button, check is opened page is
+correct.
+Expected result: Link is valid and right page is opened.
+
+Name: Button WATCH NOW is present in WATCH VIDEOS section
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Check if WATCH NOW Button is present in the bottom of
+this section.
+Expected result: Button is present, places correctly and clickable.
+
+# Here also having reference will be good
+Name: Link in Button WATCH NOW is correct.
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Click on WATCH NOW Button, check is opened page is
+correct.
+Expected result: Link is valid and right page is opened.
+
+Name: Button SIGN UP HERE is present GROUP LIVE DEMO section
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Check if SIGN UP HERE Button is present in the bottom of
+this section.
+Expected result: Button is present, places correctly and clickable.
+
+# Here also having reference will be good
+Name: Link in Button SIGN UP HERE is correct.
+Steps: Open Demo page. Scroll to See Xeneta in Action section. Click on SIGN UP HERE Button, check is opened page is
+correct.
+Expected result: Link is valid and right page is opened.
+
 # Tests for page header
 
-# Tests for links in the bottom of the page
+# Tests for page footer
 
 # Text images + animation
 
@@ -71,16 +124,15 @@ Name: Careers Page address is valid
 Steps: Insert link to Careers page (https://www.xeneta.com/careers) to browser address field
 Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
 
-
 # Tests for page body
 Perform separate test for each section
 Parameters/sections: Join us, What We Do, Our Values, A Global Tribe, Open Roles
     Name: [Section] is present
-    Steps: Open Careers page. Ensure that [Section] is presen on page
+    Steps: Open Careers page. Ensure that [Section] is present on page
     Expected result: [Section is present]
 
     Name: [Section] layout is correct
-    Steps: Open Careers page. Ensure that all [Section] elements are fully vivsible, do not cover each other and placed
+    Steps: Open Careers page. Ensure that all [Section] elements are fully visible, do not cover each other and placed
     correctly for different resolutions.
     Expected result: [Section] is present
 
@@ -94,16 +146,68 @@ Parameters/sections: Join us, What We Do, Our Values, A Global Tribe, Open Roles
     size are correct.
     Expected result: Text is formatted correctly
 
+
 Name: Demo page sections order
-Steps: Open Demo page. Check sections order.
-Expected result: Order is 1. Procure freight like a pro 2. See Xeneta In Action
+Steps: Open Careers page. Check sections order.
+Expected result: Order is 1. Join us. 2.What We Do 3. Our Values 4. A Global Tribe 5. Open Roles
+
+## Sections content & widgets ##
+## Our Values section ##
+Parameters/widgets: Xeneta is one, Modernization through data, Variety and Fairness, Transparency builds Trust
+    Name: [Widget] is present
+    Steps: Open Career page. Scroll to Our Values section. Check if [widget] is present
+    in Our Values section.
+    Expected result: [Widget] is present
+
+    # For this case there is a sense to compare picture with reference one, but I don't have any references :)
+    Name: [Widget] picture is correct
+    Steps: Open Careers page. Scroll to Our Values section. Click on [widget] header. Check if [widget] have a unique
+    picture and it's places in left part of [widget].
+    Expected result: Picture present, unique and placed correctly.
+
+    Name: [Widget] text is correct
+    Steps: Open Careers page. Scroll to Our Values  section. Click on [widget] header. Check if [widget]
+    have a unique text without any mistakes and typos. Text is placed in right part of widget and formatted correctly.
+    Expected result: Text present, unique and placed correctly.
+
+## A Global Tribe section ##
+Parameters/widgets: Oslo, New York, Hamburg
+    Name: [Widget] is present
+    Steps: Open Careers page. Scroll to A Global Tribe section. Check if [widget] is present in A Global Tribe section.
+    Expected result: [Widget] is present
+
+    # For this case there is a sense to compare picture with reference one
+    Name: [Widget] picture is correct
+    Steps: Open Careers page. Scroll to A Global Tribe section. Click on [widget] header. Check if [widget] have a unique
+    picture and it's places in upper part of [widget] before text.
+    Expected result: Picture present, unique and placed correctly.
+
+    Name: [Widget] text is correct
+    Steps: Open Careers page. Scroll to A Global Tribe section. Check if [widget] have a unique text without any
+    mistakes and typos. Text is placed in the bottom of widget and formatted correctly.
+    Expected result: Text present, unique and placed correctly.
+
+    Name: Link in [widget] is correct.
+    Steps: Open Careers page. Scroll to A Global Tribe section. Click on [widget], check is page address is
+    https://www.xeneta.com/locations/[widget] and page can be opened.
+    Expected result: Link is valid and right page is opened.
+
+## A Open Roles section ##
+Name: Open Roles contains list of open positions
+Steps:  Open Careers page. Scroll to Open Roles section. Ensure that section contain list with open roles names, one
+per string.
+Expected result: Open roles names are in list in Roles section.
+
+Name: Open Roles can be expanded.
+Steps:  Open Careers page. Scroll to Open Roles section. try to expand and collapse any of roles in  Open Roles list.
+Check if text is unique and suites to particular vacancy.
+Expected result: Open roles names are collapsable and expandable, contain the right text.
 
 # Tests for page header
 
-# Tests for links in the bottom of the page
+# Tests for page footer
 
 # Text images + animation
-
 Name:
 Steps:
 Expected result:
