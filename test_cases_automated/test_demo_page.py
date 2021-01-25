@@ -28,7 +28,7 @@ def test_demo_page_section_present(demo_page, section):
 
 
 def test_procure_freight_content_exists(demo_page):
-    assert demo_page.find_element(DemoPageLocators.BANNER_CONTENT).text != ''
+    assert demo_page.find_element(DemoPageLocators.BANNER_CONTENT).text
 
 
 @pytest.mark.parametrize('wrapper', DemoPage.learn_more_wrappers)
@@ -42,21 +42,21 @@ def test_image_in_life_demo_wrappers_displayed(demo_page, wrapper):
 def test_header_in_life_demo_wrappers_exists(demo_page, wrapper):
     assert demo_page.find_element(wrapper).find_element(By.XPATH,
                                                         DemoPageLocators.SECTION_HEADER_REL_XPATH
-                                                        ).text != ''
+                                                        ).text
 
 
 @pytest.mark.parametrize('wrapper', DemoPage.learn_more_wrappers)
 def test_text_in_life_demo_wrappers_exists(demo_page, wrapper):
     assert demo_page.find_element(wrapper).find_element(By.XPATH,
                                                         DemoPageLocators.SECTION_TEXT_REL_XPATH
-                                                        ).text != ''
+                                                        ).text
 
 
 @pytest.mark.parametrize('wrapper', DemoPage.learn_more_wrappers)
 def test_button_in_life_demo_wrappers_exists(demo_page, wrapper):
     assert demo_page.find_element(wrapper).find_element(By.XPATH,
                                                         DemoPageLocators.SECTION_BUTTON_REL_XPATH
-                                                        ).get_attribute('text') != ''
+                                                        ).get_attribute('text')
 
 
 @pytest.mark.parametrize('wrapper', DemoPage.learn_more_wrappers)
@@ -66,7 +66,7 @@ def test_button_link_in_life_demo_wrappers_valid(browser, demo_page, wrapper):
     wrapper.is_displayed()
     # TODO add a better way to wait until element attribute's state change
     time.sleep(0.5)
-    assert wrapper.get_attribute('href') != ''
+    assert wrapper.get_attribute('href')
     assert get_url_status_code(wrapper.get_attribute('href')) == 200
 
 
