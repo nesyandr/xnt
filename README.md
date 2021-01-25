@@ -12,4 +12,4 @@ and install to default location.
 Download Chromedriver from `https://chromedriver.chromium.org/downloads`, 
 unpack it to `project_folder/chromedriver` folder and add it to $PATH.
 
-For launching l tests cd to project root folder and run command `py.test` there
+For launching tests cd to project root folder and run command `py.test` there
