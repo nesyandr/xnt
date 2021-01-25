@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium.webdriver.common.by import By
 
@@ -58,12 +60,14 @@ def test_button_in_life_demo_wrappers_exists(demo_page, wrapper):
 
 
 @pytest.mark.parametrize('wrapper', DemoPage.learn_more_wrappers)
-def test_button_link_in_life_demo_wrappers_valid(demo_page, wrapper):
-    link = demo_page.find_element(wrapper).find_element(By.XPATH,
-                                                        DemoPageLocators.SECTION_BUTTON_REL_XPATH).get_attribute('href')
-
-    assert link != ''
-    assert get_url_status_code(link) == 200
+def test_button_link_in_life_demo_wrappers_valid(browser, demo_page, wrapper):
+    wrapper = demo_page.find_element(wrapper).find_element(By.XPATH,
+                                                           DemoPageLocators.SECTION_BUTTON_REL_XPATH)
+    wrapper.is_displayed()
+    # TODO add a better way to wait until element attribute's state change
+    time.sleep(0.5)
+    assert wrapper.get_attribute('href') != ''
+    assert get_url_status_code(wrapper.get_attribute('href')) == 200
 
 
 @pytest.mark.parametrize('header_link', BaseXenetaPage.header_links)
