@@ -11,14 +11,6 @@ and install to default location.
 
 Download Chromedriver from `https://chromedriver.chromium.org/downloads`, 
 unpack it to `project_folder/chromedriver` folder and add it to $PATH.
- 
-Project Organization
-------------
 
-    ├── README.md            <- The top-level README
-    ├── test_ceses_automated
-    │   ├── TDB           <- TBD
-    │   ├── TBD       <-  TBD
-    │   └── TBD            <-  TBD
-    │
-    ├── test_cases_manual    <- TBD
+For launching l tests cd to project root folder and run command `py.test` there
+ 
