@@ -60,7 +60,7 @@ class PageHeaderLocators(object):
 
 
 class PageFooterLocators(object):
-    SOCIAL_NETWORKS_FACEBOOK = (By.XPATH, '//*[@id="hs_cos_wrapper_module_158713171994500"]/ul/li[1]')
+    SOCIAL_NETWORKS_LINKEDIN = (By.XPATH, '//*[@id="hs_cos_wrapper_module_158713171994500"]/ul/li[1]')
     SOCIAL_NETWORKS_TWITTER = (By.XPATH, '//*[@id="hs_cos_wrapper_module_158713171994500"]/ul/li[2]')
     SOCIAL_NETWORKS_YOUTUBE = (By.XPATH, '//*[@id="hs_cos_wrapper_module_158713171994500"]/ul/li[3]')
     SOCIAL_NETWORKS_INSTAGRAM = (By.XPATH, '//*[@id="hs_cos_wrapper_module_158713171994500"]/ul/li[4]')

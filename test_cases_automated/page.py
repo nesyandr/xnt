@@ -30,7 +30,7 @@ class BaseXenetaPage(BasePage):
     ]
 
     footer_social_networks = [
-        locators.PageFooterLocators.SOCIAL_NETWORKS_FACEBOOK,
+        locators.PageFooterLocators.SOCIAL_NETWORKS_LINKEDIN,
         locators.PageFooterLocators.SOCIAL_NETWORKS_TWITTER,
         locators.PageFooterLocators.SOCIAL_NETWORKS_YOUTUBE,
         locators.PageFooterLocators.SOCIAL_NETWORKS_INSTAGRAM
