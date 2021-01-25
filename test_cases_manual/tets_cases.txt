@@ -27,6 +27,8 @@
 # So, let's rock!
 
 
+
+
 ############## Demo Page ##############
 ## Page address ##
 Name: Demo Page address is valid
@@ -34,7 +36,7 @@ Steps: Insert link to Demo page (https://www.xeneta.com/demo) to browser address
 Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
 
 ## Page sections, layout and test formatting ##
-# Tests for page body - it's better to check unique page elements first than elements which are present across all pages
+# it's better to check unique page elements first than elements which are present across all pages
 # Perform separate test for each section given as parameter
 Parameters/sections: Procure freight like a pro, See Xeneta In Action
     Name: [Section] is present
@@ -112,19 +114,16 @@ Steps: Open Demo page. Scroll to See Xeneta in Action section. Click on SIGN UP 
 correct.
 Expected result: Link is valid and right page is opened.
 
-# Tests for page header
 
-# Tests for page footer
 
-# Text images + animation
 
 ############## Careers Page ##############
-
+## Page address ##
 Name: Careers Page address is valid
 Steps: Insert link to Careers page (https://www.xeneta.com/careers) to browser address field
 Expected result: Address is correct, page is loaded, it's not empty (text end elements are present)
 
-# Tests for page body
+## Page sections, layout and test formatting ##
 Perform separate test for each section
 Parameters/sections: Join us, What We Do, Our Values, A Global Tribe, Open Roles
     Name: [Section] is present
@@ -146,8 +145,7 @@ Parameters/sections: Join us, What We Do, Our Values, A Global Tribe, Open Roles
     size are correct.
     Expected result: Text is formatted correctly
 
-
-Name: Demo page sections order
+Name: Career page sections order
 Steps: Open Careers page. Check sections order.
 Expected result: Order is 1. Join us. 2.What We Do 3. Our Values 4. A Global Tribe 5. Open Roles
 
@@ -203,11 +201,40 @@ Steps:  Open Careers page. Scroll to Open Roles section. try to expand and colla
 Check if text is unique and suites to particular vacancy.
 Expected result: Open roles names are collapsable and expandable, contain the right text.
 
-# Tests for page header
 
-# Tests for page footer
 
-# Text images + animation
-Name:
-Steps:
-Expected result:
+
+# Following tests are equivalent for both pages
+############## Tests for page header ##############
+Parameters/widgets: Our Customers, Platform, Resources, Company, Sign in, Get Demo
+    Name: [Widget] is present
+    Steps: Open Careers/Demo page. Check if [widget] is present in page header.
+    Expected result: [Widget] is present
+
+    Name: Link in [widget] is correct.
+    Steps: Open Careers/Demo page. Click on [widget], check is page address if page can be opened.
+    Expected result: Link is valid and right page is opened.
+
+
+
+# Following tests are equivalent for both pages
+############## Tests for page footer ##############
+Parameters/icons: Linkedin, Twitter, Youtube, Instagram
+    Name: [Icon] is present
+    Steps: Open Careers/Demo page. Check if [icon] is present in page header.
+    Expected result: [Icon] is present
+
+    Name: Link in [icon] is correct.
+    Steps: Open Careers/Demo page. Click on [icon], check is page address if page can be opened.
+    Expected result: Link is valid and right page is opened.
+
+
+Parameters/Footer_inks: Shippers & BCOs, Freight Forwarders, Carriers, Xeneta Customer Community, The Xeneta Platform,
+                        Resources, Partner Directory, Careers, News, Contact Us, Press Room
+    Name: [Footer_link] is present
+    Steps: Open Careers/Demo page. Check if [footer_link] is present in page header.
+    Expected result: [Footer_link] is present
+
+    Name: [Footer_link] is valid.
+    Steps: Open Careers/Demo page. Click on [footer_link], check is page address if page can be opened.
+    Expected result: Link is valid and right page is opened.
